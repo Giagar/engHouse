@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*   box-sizing: border-box; */
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 2% 76% 20% 2%;
+  grid-template-areas:
+    ". houseW furnitureW ."
+    ". command command .";
+  min-width: 1280px;
+}
+
+#houseWrapper {
+  display: grid;
+  justify-content: center !important;
+  position: relative;
+  grid-area: houseW;
+  width: 1000px;
+  height: 600px;
+  background: url("https://www.svgrepo.com/show/21736/house-outline.svg")
+    no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid grey;
+  margin-bottom: 200px;
+}
+
+#house {
+  position: relative;
+  top: 28%;
+  /*   border: 1px solid blue; */
+  grid-area: house;
+  display: grid;
+  grid-template-areas: 
+  /*     ". . attic . ."
+      "bathroom bathroom . bedroom bedroom"
+      "livRoom livRoom hall kitchen garage"
+      ". . basement basement ."; */
+    ". . . . . . attic attic attic attic . . . . ."
+    ". bathroom bathroom bathroom bathroom bathroom bathroom . . bedroom bedroom bedroom bedroom bedroom ."
+    "livRoom livRoom livRoom livRoom livRoom livRoom hall kitchen kitchen kitchen kitchen kitchen garage garage garage"
+    ". . . . . . basement basement basement basement basement basement basement . .";
+
+  width: 655px;
+  opacity: 0.7;
+  /*   align-items: end; */
+  grid-gap: 4px;
+}
+
+#furnitureWrapper {
+  grid-area: furnitureW;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "ftitle ftitle"
+    "furniture furniture";
+  /*   align-items: center; */
+  padding-left: 50px;
+  margin-top: 80px;
+  /*   display: flex; */
+}
+
+#furnitureTitle {
+  grid-area: ftitle;
+  margin-bottom: 50px;
+  text-align: center;
+
+  text-transform: uppercase;
+  color: black;
+  border: 4px solid black;
+  background: orange;
+  border-radius: 22px;
+  padding: 0.4em;
+}
+
+#furniture {
+  grid-area: furniture;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+}
+
+#command {
+  grid-area: command;
+}
+
+.draggable {
+  /*   width: 100px; 
+    height: 100px;  */
+  /*   padding: 0.5em;  */
+  /*   float: left;  */
+  margin: 10px 10px 10px 0;
+  border: none;
+  position: relative;
+  height: 90px;
+  width: 60px;
+  display: grid;
+  justify-items: center;
+  /*   box-shadow: 0 5px 10px rgba(180, 180, 180, 0.8);
+    border-radius: 4px; */
+}
+
+.draggable p {
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: Arial;
+  /*   padding: 0 3px 3px 3px */
+}
+
+.droppable {
+  /*   width: 150px;  */
+  height: 100px;
+  padding: 0.5em;
+  /*   float: left;  */
+  /*   margin: 5px;  */
+  display: grid;
+  justify-content: center;
+  align-items: start;
+}
+
+.droppable p {
+  text-transform: uppercase;
+  color: black;
+  border: 4px solid black;
+  background: orange;
+  border-radius: 22px;
+  padding: 0.4em;
+  /*   height: 1.5em; */
+}
+
+/*------------ house ------------*/
+#kitchen {
+  /*   background: url("https://www.svgrepo.com/show/17154/kitchen.svg") no-repeat; */
+  /*   background-size: contain; */
+  /*   opacity: 0.4; */
+  grid-area: kitchen;
+}
+
+#livRoom {
+  grid-area: livRoom;
+}
+
+#hall {
+  grid-area: hall;
+}
+
+#garage {
+  grid-area: garage;
+}
+
+#basement {
+  grid-area: basement;
+}
+
+#bathroom {
+  grid-area: bathroom;
+  margin-left: 10px;
+  /*margin to correct the cell made with grid template areas*/
+}
+
+#bedroom {
+  grid-area: bedroom;
+  margin-right: 10px;
+}
+
+#attic {
+  grid-area: attic;
+  margin-left: 44px;
+}
+
+/*------------ furniture: kitchen ------------*/
+
+/*#fridge{
+    height: 80px;
+    width: 50px;
+  }
+  
+  #cupboard{
+    height: 80px;
+    width: 50px;
+  }
+  
+  #sink{
+    height: 80px;
+    width: 50px;
+  }
+  
+  #cooker{
+    height: 80px;
+    width: 50px;
+  }*/
+
+/*------------ furniture: livRoom ------------*/
+/*#sofa{
+    background: url("https://www.svgrepo.com/show/251738/refrigerator-fridge.svg") no-repeat;
+    height: 80px;
+    width: 50px;
+  }*/
+
+.highHighlights {
+  opacity: 1;
+  background: yellow;
+}
