@@ -1,10 +1,37 @@
+:root {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   /*   box-sizing: border-box; */
 }
 
-body {
+header {
+  border-bottom: 4px solid rgb(0, 0, 0);
+  padding: 50px 10px;
+  margin-bottom: 50px;
+  background: orange;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#description {
+  text-align: center;
+  font-size: 1.4rem;
+  /* text-transform: capitalize; */
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+main {
+  width: 1400px;
+  margin: 0 auto;
   display: grid;
   justify-content: center;
   grid-template-columns: 2% 76% 20% 2%;
@@ -159,7 +186,8 @@ body {
 
 #bathroom {
   grid-area: bathroom;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  margin-left: 20px;
   /*margin to correct the cell made with grid template areas*/
 }
 
